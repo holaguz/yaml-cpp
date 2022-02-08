@@ -2,14 +2,13 @@ project "yaml-cpp"
 	kind "StaticLib"
 	language "C++"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir (OutputDir .. "/bin/%{prj.name}")
+	objdir (OutputDir .. "/bin-int/%{prj.name}")
 
 	files
 	{
 		"src/**.h",
-		"src/**.cpp",
-		
+		"src/**.cpp",		
 		"include/**.h"
 	}
 
